@@ -6,13 +6,13 @@ resource "aws_vpc" "main1" {
   }
 }
 
-resource "aws_subnet" "sbnt1" {
+resource "aws_subnet" "sbnt2" {
   vpc_id     = aws_vpc.main1.id
   cidr_block = "192.168.8.0/22"
   map_public_ip_on_launch = true
   tags = {
     
-    Name = "pub-sbnt1"
+    Name = "pub-sbnt2"
   }
 }
 
