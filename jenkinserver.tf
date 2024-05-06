@@ -24,7 +24,7 @@ resource "aws_key_pair" "terraformkey" {
   resource "aws_instance" "jenkin-server" {
   ami          = "ami-0440d3b780d96b29d"
   instance_type = "t2.xlarge"
-    subnet_id     = aws_subnet.sbnt1.id
+    subnet_id     = aws_subnet.sbnt2.id
     key_name = aws_key_pair.terraformkey.key_name
   tags = {
 
@@ -50,7 +50,7 @@ route {
 }
 
 resource "aws_route_table_association" "RTB-ASTN-PVT1" {
-  subnet_id      = aws_subnet.sbnt1.id
+  subnet_id      = aws_subnet.sbnt2.id
   route_table_id = aws_route_table.RTB-1.id
 }
 
