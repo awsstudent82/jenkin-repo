@@ -24,7 +24,7 @@ resource "aws_key_pair" "terraformkey" {
   resource "aws_instance" "jenkin-server" {
   ami          = "ami-0440d3b780d96b29d"
   instance_type = "t2.xlarge"
-    subnet_id     = aws_subnet.sbnt2.id
+    subnet_id     = aws_subnet.sbnt1.id
     key_name = aws_key_pair.terraformkey.key_name
   tags = {
 
