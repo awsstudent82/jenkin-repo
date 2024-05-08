@@ -50,7 +50,7 @@ route {
 }
 
 resource "aws_route_table_association" "RTB-ASTN-PVT1" {
-  subnet_id      = aws_subnet.sbnt2.id
+  subnet_id      = aws_subnet.sbnt1.id
   route_table_id = aws_route_table.RTB-1.id
 }
 
