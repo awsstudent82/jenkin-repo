@@ -2,17 +2,17 @@ resource "aws_vpc" "main1" {
   cidr_block       = "192.168.0.0/16"
   instance_tenancy = "default"
   tags = {
-    Name = "vpc1"
+    Name = "vpc1-jenkin"
   }
 }
 
-resource "aws_subnet" "sbnt2" {
+resource "aws_subnet" "sbnt1" {
   vpc_id     = aws_vpc.main1.id
   cidr_block = "192.168.8.0/22"
   map_public_ip_on_launch = true
   tags = {
     
-    Name = "pub-sbnt2"
+    Name = "pub-sbnt1"
   }
 }
 
